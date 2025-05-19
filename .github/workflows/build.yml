@@ -1,0 +1,15 @@
+name: Build ZMK firmware
+on:
+  workflow_dispatch: # can be triggered manually
+  push:
+    paths:
+      - "build.yaml"
+      - "config/*.keymap"
+      - "config/*.dtsi"
+      - "config/*.conf"
+      - "config/west.yml"
+      - "knucklehead/*.dtsi"
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main

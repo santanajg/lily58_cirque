@@ -1,0 +1,31 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: badjeff
+      url-base: https://github.com/badjeff
+  projects:
+    - name: zmk
+      remote: badjeff
+      revision: feat/pointers-move-scroll
+      import: app/west.yml
+    - name: zmk-analog-input-driver
+      remote: badjeff
+      revision: main
+    - name: zmk-split-peripheral-input-relay
+      remote: badjeff
+      revision: main
+    - name: zmk-split-peripheral-output-relay
+      remote: badjeff
+      revision: main
+    - name: zmk-input-behavior-listener
+      remote: badjeff
+      revision: main
+    - name: zmk-output-behavior-listener
+      remote: badjeff
+      revision: main
+    - name: cirque-input-module
+      remote: badjeff
+      revision: main
+  self:
+    path: config
